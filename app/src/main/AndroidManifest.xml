@@ -22,6 +22,7 @@
 
         <activity android:name=".HelloAndroid" android:label="Hello Android Bitch"/>
         <activity android:name=".LoginScreen" android:label="Login Screen Bitch"/>
+        <activity android:name=".HelloAndroidWithMenuActivity" android:label="Hello Menu Bitch"/>
     </application>
 
 </manifest>

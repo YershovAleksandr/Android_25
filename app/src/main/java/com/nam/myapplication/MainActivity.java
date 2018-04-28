@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         "Select bitch",
                         "Hello Android",
                         "Login Screen",
-                        "Section 3",
+                        "Hello Android With Menu",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -98,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         itt =  new Intent(getBaseContext(), LoginScreen.class);
                         break;
+                    case 3:
+                        itt =  new Intent(getBaseContext(), HelloAndroidWithMenuActivity.class);
+                        break;
+
 
                 }
 
