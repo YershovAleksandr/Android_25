@@ -38,6 +38,7 @@
         <activity android:name=".SharedPreferenceReadWriteActivity" android:label="Shared Preference" />
         <activity android:name=".PreferencesActivityExample" android:label="Preference Activity example bitch" />
         <activity android:name=".ViewAndUpdatePreferencesActivity" android:label="View and Update Preference" />
+        <activity android:name=".DatabaseExampleActivity" android:label="SQL Bitch!!!" />
     </application>
 
 </manifest>

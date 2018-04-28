@@ -1,4 +1,4 @@
-package course.examples.DataManagement.DataBaseExample;
+package com.nam.myapplication;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

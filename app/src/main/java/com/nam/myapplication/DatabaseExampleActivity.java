@@ -1,4 +1,4 @@
-package course.examples.DataManagement.DataBaseExample;
+package com.nam.myapplication;
 
 import android.app.ListActivity;
 import android.content.ContentValues;
@@ -18,7 +18,7 @@ public class DatabaseExampleActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.main);
+		setContentView(R.layout.sql_main);
 
 		// Create a new DatabaseHelper
 		mDbHelper = new DatabaseOpenHelper(this);
@@ -31,9 +31,7 @@ public class DatabaseExampleActivity extends ListActivity {
 
 		// Create a cursor
 		Cursor c = readArtists();
-		mAdapter = new SimpleCursorAdapter(this, R.layout.list_layout, c,
-				DatabaseOpenHelper.columns, new int[] { R.id._id, R.id.name },
-				0);
+		mAdapter = new SimpleCursorAdapter(this, R.layout.sql_list_layout, c, DatabaseOpenHelper.columns, new int[] { R.id._id, R.id.name },0);
 
 		setListAdapter(mAdapter);
 

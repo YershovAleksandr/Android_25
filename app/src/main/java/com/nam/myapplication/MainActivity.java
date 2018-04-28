@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         "External file write read",
                         "Shared Preference",
                         "Preference Fragment",
-                        "Section 3",
+                        "SQL ПИДОР!!!111",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -112,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 8:
                         itt =  new Intent(getBaseContext(), PreferencesActivityExample.class);
+                        break;
+                    case 9:
+                        itt =  new Intent(getBaseContext(), DatabaseExampleActivity.class);
                         break;
 
 
