@@ -22,4 +22,6 @@
     <string name="highscore_string">&quot;HighScore: &quot;</string>
     <string name="reset_string">Reset</string>
 
+    <string name="view_username_string">View User Name</string>
+
 </resources>

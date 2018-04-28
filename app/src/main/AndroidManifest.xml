@@ -36,6 +36,8 @@
         <activity android:name=".InternalFileWriteReadActivity" android:label="Internal file write read bitch" />
         <activity android:name=".ExternalFileWriteReadActivity" android:label="External file write read bitch" />
         <activity android:name=".SharedPreferenceReadWriteActivity" android:label="Shared Preference" />
+        <activity android:name=".PreferencesActivityExample" android:label="Preference Activity example bitch" />
+        <activity android:name=".ViewAndUpdatePreferencesActivity" android:label="View and Update Preference" />
     </application>
 
 </manifest>

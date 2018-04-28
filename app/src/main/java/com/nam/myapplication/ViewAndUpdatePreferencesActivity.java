@@ -1,13 +1,13 @@
-package course.examples.datamanagement.preferencefragment;
+package com.nam.myapplication;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.support.v7.app.AppCompatActivity;
 
-public class ViewAndUpdatePreferencesActivity extends Activity {
+public class ViewAndUpdatePreferencesActivity extends AppCompatActivity {
 
 	private static final String USERNAME = "uname";
 
@@ -34,23 +34,19 @@ public class ViewAndUpdatePreferencesActivity extends Activity {
 			addPreferencesFromResource(R.xml.user_prefs);
 
 			// Get the username Preference
-			mUserNamePreference = (Preference) getPreferenceManager()
-					.findPreference(USERNAME);
+			mUserNamePreference = (Preference) getPreferenceManager().findPreference(USERNAME);
 
 			// Attach a listener to update summary when username changes
 			mListener = new OnSharedPreferenceChangeListener() {
 				@Override
-				public void onSharedPreferenceChanged(
-						SharedPreferences sharedPreferences, String key) {
-					mUserNamePreference.setSummary(sharedPreferences.getString(
-							USERNAME, "None Set"));
+				public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+					mUserNamePreference.setSummary(sharedPreferences.getString(USERNAME, "None Set"));
 				}
 			};
 
 			// Get SharedPreferences object managed by the PreferenceManager for
 			// this Fragment
-			SharedPreferences prefs = getPreferenceManager()
-					.getSharedPreferences();
+			SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
 
 			// Register a listener on the SharedPreferences object
 			prefs.registerOnSharedPreferenceChangeListener(mListener);

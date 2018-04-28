@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         "Internal file write read",
                         "External file write read",
                         "Shared Preference",
-                        "Section 3",
+                        "Preference Fragment",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -109,6 +109,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         itt =  new Intent(getBaseContext(), SharedPreferenceReadWriteActivity.class);
+                        break;
+                    case 8:
+                        itt =  new Intent(getBaseContext(), PreferencesActivityExample.class);
                         break;
 
 
