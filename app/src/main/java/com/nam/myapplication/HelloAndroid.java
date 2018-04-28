@@ -1,9 +1,9 @@
-package course.examples.helloworld;
+package com.nam.myapplication;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class HelloAndroid extends Activity {
+public class HelloAndroid extends AppCompatActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		
 		// Required call through to Activity.onCreate()
@@ -11,7 +11,7 @@ public class HelloAndroid extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		// Set up the application's user interface (content view)
-		setContentView(R.layout.main);
+		setContentView(R.layout.helloandroid);
 		
 	}
 }

@@ -1,5 +1,6 @@
 package com.nam.myapplication;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(new MyAdapter(
                 toolbar.getContext(),
                 new String[]{
-                        "Section 1f   ffffffffffffffff ffffffffffff fffffffffff ffffffff fffffffffffffffff",
-                        "Section 2",
+                        "Select bitch",
+                        "Hello Android",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -84,6 +85,25 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                         .commit();
+
+                Intent itt = null;
+
+                switch (position) {
+                    //case 0:
+                    case 1:
+                        itt = new Intent(getBaseContext(), HelloAndroid.class);
+                        break;
+                    case 42:
+                        itt =  new Intent(getBaseContext(), MainActivity.class);
+                        break;
+
+                }
+
+                if (null != itt) {
+                    startActivity(itt);
+                }
+
+
             }
 
             @Override
