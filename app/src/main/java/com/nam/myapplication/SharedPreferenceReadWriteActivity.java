@@ -1,16 +1,16 @@
-package course.examples.datamanagement.sharedpreferences;
+package com.nam.myapplication;
 
 import java.util.Random;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SharedPreferenceReadWriteActivity extends Activity {
+public class SharedPreferenceReadWriteActivity extends AppCompatActivity {
 	private static String HIGH_SCORE = "high_score";
 
 	@Override
@@ -19,7 +19,7 @@ public class SharedPreferenceReadWriteActivity extends Activity {
 
 		final SharedPreferences prefs = getPreferences(MODE_PRIVATE);
 		
-		setContentView(R.layout.main);
+		setContentView(R.layout.sharedpreference);
 
 		// High Score
 		final TextView highScore = (TextView) findViewById(R.id.high_score_text);

@@ -35,6 +35,7 @@
         <activity android:name=".SongsActivity" android:label="Songs Bitch"/>
         <activity android:name=".InternalFileWriteReadActivity" android:label="Internal file write read bitch" />
         <activity android:name=".ExternalFileWriteReadActivity" android:label="External file write read bitch" />
+        <activity android:name=".SharedPreferenceReadWriteActivity" android:label="Shared Preference" />
     </application>
 
 </manifest>
