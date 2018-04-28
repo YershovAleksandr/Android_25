@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         "Hello Android With Menu",
                         "Hello Android With Tab",
                         "Internal file write read",
-                        "Section 3",
+                        "External file write read",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -104,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                     case 5:
                         itt =  new Intent(getBaseContext(), InternalFileWriteReadActivity.class);
                         break;
+                    case 6:
+                        itt =  new Intent(getBaseContext(), ExternalFileWriteReadActivity.class);
+                        break;
+
 
 
                 }

@@ -1,4 +1,4 @@
-package course.examples.datamanagement.fileexternal;
+package com.nam.myapplication;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -23,18 +23,15 @@ public class ExternalFileWriteReadActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.fileexternalmemory);
 
-		if (Environment.MEDIA_MOUNTED.equals(Environment
-				.getExternalStorageState())) {
+		if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
 
-			File outFile = new File(
-					getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-					fileName);
+			File outFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), fileName);
 			
 			if (!outFile.exists())
 				copyImageToMemory(outFile);
-			
+
 			ImageView imageview = (ImageView) findViewById(R.id.image);
 			imageview.setImageURI(Uri.parse("file://" + outFile.getAbsolutePath()));
 		
@@ -44,11 +41,9 @@ public class ExternalFileWriteReadActivity extends Activity {
 	private void copyImageToMemory(File outFile) {
 		try {
 
-			BufferedOutputStream os = new BufferedOutputStream(
-					new FileOutputStream(outFile));
+			BufferedOutputStream os = new BufferedOutputStream(new FileOutputStream(outFile));
 
-			BufferedInputStream is = new BufferedInputStream(getResources()
-					.openRawResource(R.raw.painter));
+			BufferedInputStream is = new BufferedInputStream(getResources().openRawResource(R.raw.painter));
 
 			copy(is, os);
 
