@@ -27,6 +27,7 @@
         <activity android:name=".ArtistsActivity" android:label="Artist Bitch"/>
         <activity android:name=".AlbumsActivity" android:label="Album Bitch"/>
         <activity android:name=".SongsActivity" android:label="Songs Bitch"/>
+        <activity android:name=".InternalFileWriteReadActivity" android:label="Internal file write read bitch" />
     </application>
 
 </manifest>

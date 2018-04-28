@@ -1,4 +1,4 @@
-package course.examples.datamanagement.fileinternal;
+package com.nam.myapplication;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,15 +10,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class InternalFileWriteReadActivity extends Activity {
+public class InternalFileWriteReadActivity extends AppCompatActivity {
 
-	private final static String fileName = "TestFile.txt";
+	private final static String fileName = "TestFile42.txt";
 	private String TAG = "InternalFileWriteReadActivity";
 
 	@Override
@@ -26,7 +26,7 @@ public class InternalFileWriteReadActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.main);
+		setContentView(R.layout.fileinternalmemory);
 		LinearLayout ll = (LinearLayout) findViewById(R.id.linearLayout);
 
 		// Check whether fileName already exists in directory used
@@ -59,8 +59,7 @@ public class InternalFileWriteReadActivity extends Activity {
 
 		FileOutputStream fos = openFileOutput(fileName, MODE_PRIVATE);
 
-		PrintWriter pw = new PrintWriter(new BufferedWriter(
-				new OutputStreamWriter(fos)));
+		PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(fos)));
 
 		pw.println("Line 1: This is a test of the File Writing API");
 		pw.println("Line 2: This is a test of the File Writing API");

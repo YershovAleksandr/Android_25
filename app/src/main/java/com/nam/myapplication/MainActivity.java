@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         "Login Screen",
                         "Hello Android With Menu",
                         "Hello Android With Tab",
-                        "Section 3",
+                        "Internal file write read",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         itt =  new Intent(getBaseContext(), HelloTabWidget.class);
                         break;
+                    case 5:
+                        itt =  new Intent(getBaseContext(), InternalFileWriteReadActivity.class);
+                        break;
+
 
                 }
 
