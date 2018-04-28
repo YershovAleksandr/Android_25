@@ -21,6 +21,7 @@
         </activity>
 
         <activity android:name=".HelloAndroid" android:label="Hello Android Bitch"/>
+        <activity android:name=".LoginScreen" android:label="Login Screen Bitch"/>
     </application>
 
 </manifest>

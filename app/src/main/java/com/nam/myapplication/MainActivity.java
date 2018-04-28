@@ -23,6 +23,8 @@ import android.content.res.Resources.Theme;
 
 import android.widget.TextView;
 
+import javax.security.auth.login.LoginException;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{
                         "Select bitch",
                         "Hello Android",
-                        "Section 3",
+                        "Login Screen",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -93,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     case 1:
                         itt = new Intent(getBaseContext(), HelloAndroid.class);
                         break;
-                    case 42:
-                        itt =  new Intent(getBaseContext(), MainActivity.class);
+                    case 2:
+                        itt =  new Intent(getBaseContext(), LoginScreen.class);
                         break;
 
                 }

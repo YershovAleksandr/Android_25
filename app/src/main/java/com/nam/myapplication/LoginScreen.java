@@ -1,17 +1,17 @@
-package course.examples.helloworldwithlogin;
+package com.nam.myapplication;
 
 import java.util.Random;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class LoginScreen extends Activity {
+public class LoginScreen extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +28,7 @@ public class LoginScreen extends Activity {
 
                     // Create an explicit Intent for starting the HelloAndroid
                     // Activity
-                    Intent helloAndroidIntent = new Intent(LoginScreen.this,
-                            HelloAndroid.class);
+                    Intent helloAndroidIntent = new Intent(LoginScreen.this,  HelloAndroid.class);
 
                     // Use the Intent to start the HelloAndroid Activity
                     startActivity(helloAndroidIntent);
