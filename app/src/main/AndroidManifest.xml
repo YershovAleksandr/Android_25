@@ -23,6 +23,10 @@
         <activity android:name=".HelloAndroid" android:label="Hello Android Bitch"/>
         <activity android:name=".LoginScreen" android:label="Login Screen Bitch"/>
         <activity android:name=".HelloAndroidWithMenuActivity" android:label="Hello Menu Bitch"/>
+        <activity android:name=".HelloTabWidget" android:label="Hello Tab Bitch"/>
+        <activity android:name=".ArtistsActivity" android:label="Artist Bitch"/>
+        <activity android:name=".AlbumsActivity" android:label="Album Bitch"/>
+        <activity android:name=".SongsActivity" android:label="Songs Bitch"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package course.examples.helloworldtabwidget;
+package com.nam.myapplication;
 
 import android.app.TabActivity;
 import android.content.Intent;
@@ -11,7 +11,7 @@ public class HelloTabWidget extends TabActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.helloandroidwithtab);
 
         Resources res = getResources(); // Resource object to get Drawables
         TabHost tabHost = getTabHost();  // The activity TabHost

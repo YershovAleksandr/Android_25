@@ -23,9 +23,6 @@ import android.content.res.Resources.Theme;
 
 import android.widget.TextView;
 
-import javax.security.auth.login.LoginException;
-
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         "Hello Android",
                         "Login Screen",
                         "Hello Android With Menu",
-                        "Section 3",
+                        "Hello Android With Tab",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -101,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         itt =  new Intent(getBaseContext(), HelloAndroidWithMenuActivity.class);
                         break;
-
+                    case 4:
+                        itt =  new Intent(getBaseContext(), HelloTabWidget.class);
+                        break;
 
                 }
 
