@@ -1,4 +1,4 @@
-package course.examples.location.getlocation;
+package com.nam.myapplication;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,17 +7,17 @@ import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-public class LocationGetLocationActivity extends Activity {
+public class LocationGetLocationActivity extends AppCompatActivity {
 
 	private static final long ONE_MIN = 1000 * 60;
 	private static final long TWO_MIN = ONE_MIN * 2;
@@ -43,7 +43,7 @@ public class LocationGetLocationActivity extends Activity {
 	private LocationManager mLocationManager;
 	private LocationListener mLocationListener;
 
-	private final String TAG = "LocationGetLocationActivity";
+	private final String TAG = "X42";
 
 	private boolean mFirstUpdate = true;
 
@@ -51,7 +51,7 @@ public class LocationGetLocationActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.main);
+		setContentView(R.layout.locationgetlocation);
 
 		mAccuracyView = (TextView) findViewById(R.id.accuracy_view);
 		mTimeView = (TextView) findViewById(R.id.time_view);
@@ -175,8 +175,8 @@ public class LocationGetLocationActivity extends Activity {
 	// was taken no longer then minAge milliseconds ago. If none,
 	// return null.
 
-	private Location bestLastKnownLocation(float minAccuracy, long maxAge) {
 
+	private Location bestLastKnownLocation(float minAccuracy, long maxAge) {
 		Location bestResult = null;
 		float bestAccuracy = Float.MAX_VALUE;
 		long bestAge = Long.MIN_VALUE;

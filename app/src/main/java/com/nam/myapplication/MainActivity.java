@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         "Shared Preference",
                         "Preference Fragment",
                         "SQL ПИДОР!!!111",
-                        "Section 3",
+                        "Get Location",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -115,6 +115,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 9:
                         itt =  new Intent(getBaseContext(), DatabaseExampleActivity.class);
+                        break;
+                    case 10:
+                        itt =  new Intent(getBaseContext(), LocationGetLocationActivity.class);
                         break;
 
 
