@@ -21,6 +21,9 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data android:name="com.google.android.gms.version" android:value="3.1.36" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,6 +45,7 @@
         <activity android:name=".ViewAndUpdatePreferencesActivity" android:label="View and Update Preference" />
         <activity android:name=".DatabaseExampleActivity" android:label="SQL Bitch!!!" />
         <activity android:name=".LocationGetLocationActivity" android:label="Get Location" />
+        <activity android:name=".LocationGetLocationActivityGP" android:label="Get Location GP" />
     </application>
 
 </manifest>

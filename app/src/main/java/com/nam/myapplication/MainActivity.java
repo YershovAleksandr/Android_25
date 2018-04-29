@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         "Preference Fragment",
                         "SQL ПИДОР!!!111",
                         "Get Location",
-                        "Section 3",
+                        "Get Location GP",
                         "Section 3",
                         "Section 3",
                         "Section 3",
@@ -118,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 10:
                         itt =  new Intent(getBaseContext(), LocationGetLocationActivity.class);
+                        break;
+                    case 11:
+                        itt =  new Intent(getBaseContext(), LocationGetLocationActivityGP.class);
                         break;
 
 

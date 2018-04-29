@@ -3,7 +3,7 @@
  * Doesn't run on emulator 
 */
 
-package course.examples.location.getlocationservices;
+package com.nam.myapplication;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,10 +11,10 @@ import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -25,7 +25,7 @@ import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 
-public class LocationGetLocationActivity extends Activity implements
+public class LocationGetLocationActivityGP extends AppCompatActivity implements
 		GooglePlayServicesClient.ConnectionCallbacks,
 		GooglePlayServicesClient.OnConnectionFailedListener, LocationListener {
 
@@ -52,7 +52,7 @@ public class LocationGetLocationActivity extends Activity implements
 	// Current best location estimate
 	private Location mBestReading;
 
-	private final String TAG = "LocationGetLocationActivity";
+	private final String TAG = "X42";
 
 	private boolean mFirstUpdate = true;
 	private LocationClient mLocationClient;
@@ -65,7 +65,7 @@ public class LocationGetLocationActivity extends Activity implements
 		if (!servicesAvailable())
 			finish();
 
-		setContentView(R.layout.main);
+		setContentView(R.layout.locationgetlocationservices);
 
 		mAccuracyView = (TextView) findViewById(R.id.accuracy_view);
 		mTimeView = (TextView) findViewById(R.id.time_view);
@@ -94,7 +94,11 @@ public class LocationGetLocationActivity extends Activity implements
 		super.onStart();
 
 		// Connect to LocationServices
-		mLocationClient.connect();
+		//try {
+			mLocationClient.connect();
+		//} catch (Exception ex){
+			Log.i(TAG, "WTF   ");
+		//}
 	}
 
 	@Override
@@ -169,7 +173,7 @@ public class LocationGetLocationActivity extends Activity implements
 					@Override
 					public void run() {
 
-						mLocationClient.removeLocationUpdates(LocationGetLocationActivity.this);
+						mLocationClient.removeLocationUpdates(LocationGetLocationActivityGP.this);
 
 					}
 				}, MEASURE_TIME, TimeUnit.MILLISECONDS);
